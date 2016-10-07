@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.assignment_1.MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HeartRate Monitor"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:id="@+id/hrm"
+        android:background="#B2EBF2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:text="Name : "
+        android:layout_below="@+id/hrm"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fillname"
+        android:layout_below="@+id/hrm"
+        android:layout_toRightOf="@+id/name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient ID : "
+        android:id="@+id/pid"
+        android:layout_below="@+id/name"
+        android:textSize="18dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fillpid"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/pid"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age : "
+        android:id="@+id/age"
+        android:layout_below="@+id/pid"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fillage"
+        android:layout_below="@+id/pid"
+        android:layout_toRightOf="@+id/age"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sex : "
+        android:id="@+id/sex"
+        android:layout_below="@+id/age"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/age"
+        android:layout_toRightOf="@+id/sex"
+        android:layout_marginTop="10dp">
+
+        <RadioButton android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:layout_marginLeft="10dp"/>
+
+        <RadioButton android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginLeft="10dp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/sex"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/run"
+        android:text="RUN"
+        android:textSize="20dp"
+        android:layout_weight="1.0"
+        android:background="#00C853"
+        android:layout_marginRight="20dp"
+        android:onClick="RunData" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:layout_toRightOf="@+id/run"
+        android:text="STOP"
+        android:textSize="20dp"
+        android:background="#D84315"
+        android:layout_weight="1.0"
+        android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/graph"
+            android:layout_below="@+id/buttons"
+            android:layout_marginTop="10dp"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assignment done by : Rutvik Patel , Aakanxu Shsh"
+        android:id="@+id/label"
+        android:layout_below="@+id/graph"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        />
+
+</RelativeLayout>
+</ScrollView>
